@@ -1,18 +1,16 @@
 import React from 'react';
 import './QuoteCard.css';
 
-
-
-function QuoteCard(props) {
-    return(
-        <figure class="QuoteCard">
-        <img src ={props.image}/>
-        <figcaption>
-          <blockquote>{props.quote}</blockquote>
-          <cite>{props.character}</cite>
-        </figcaption>
-      </figure>
-    );
+function QuoteCard({quote}) {
+  return (
+    <figure className="QuoteCard">
+      <img src={quote.image}/>
+      <figcaption>
+        <blockquote>{quote.quote}</blockquote>
+        <cite>{quote.character}</cite>
+      </figcaption>
+    </figure>
+  );
 }
 
 export default QuoteCard;
